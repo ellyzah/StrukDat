@@ -12,7 +12,11 @@ struct HashTable
 
 // Function Hash
 int hashFunction (string key){
-    return tolower(key[0])-97;
+    int sum = 0;
+    for (char c : key){
+        sum += c;
+    }
+    return sum % 26;
 }
 
 // Cek Daftar
